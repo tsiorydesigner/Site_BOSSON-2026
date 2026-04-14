@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOSON - L'Élégance à l'État Pur | Mobilier Luxe Moderne</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <div class="logo">BOSON</div>
+            <ul class="nav-items">
+                <li><a href="#gallery">Collections</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#contact" class="nav-cta">Consultation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <div class="hero-tagline">Mobilier de Luxe Moderne</div>
+                <h1>L'Élégance<br>à l'État Pur</h1>
+                <p class="slogan">« Le design qui gravite autour de vous »</p>
+                <p>Chaque pièce de notre collection incarne la fusion parfaite entre esthétique contemporaine et artisanat intemporel. Découvrez des meubles qui transforment votre espace en sanctuaire personnel.</p>
+                <div class="hero-cta-group">
+                    <a href="#gallery" class="btn-primary">Explorer la Collection</a>
+                    <a href="#contact" class="btn-secondary">Demander une Consultation</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-inner">
+                        <span>✦</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEXTURE GALLERY -->
+    <section class="texture-gallery" id="gallery">
+        <div class="section-header">
+            <div class="label">Détails & Textures</div>
+            <h2>Zoom sur l'Élégance</h2>
+            <p>Explorez les matières premières et finitions qui font la différence. Chaque texture raconte une histoire de précision et de raffinement.</p>
+        </div>
+        
+        <!-- CAROUSEL PRINCIPALE -->
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-slide active">
+                    <img src="image/étagère-01.jpg" alt="Velours Premium" class="carousel-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-content">
+                        <div class="texture-name">Velours Premium</div>
+                        <div class="texture-description">Douceur intemporelle pour vos sièges</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="image/porte de style grange-01.jpg" alt="Chêne Naturel" class="carousel-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-content">
+                        <div class="texture-name">Chêne Naturel</div>
+                        <div class="texture-description">Grain authentique, finition légère</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="image/meuble de salle de bain-01.jpg" alt="Marbre Blanc" class="carousel-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-content">
+                        <div class="texture-name">Marbre Blanc</div>
+                        <div class="texture-description">Pureté minérale et sophistication</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="image/porte de style grange-02.jpg" alt="Cuir Véritable" class="carousel-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-content">
+                        <div class="texture-name">Cuir Véritable</div>
+                        <div class="texture-description">Patine naturelle qui s'améliore</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="image/meuble de salle de bain-02.jpg" alt="Laiton Brossé" class="carousel-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-content">
+                        <div class="texture-name">Laiton Brossé</div>
+                        <div class="texture-description">Détails orfèvrerie et brillance</div>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="image/étagère-02.jpg" alt="Lin Naturel" class="carousel-image" style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="carousel-content">
+                        <div class="texture-name">Lin Naturel</div>
+                        <div class="texture-description">Légèreté et texture organique</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Carousel Controls -->
+            <button class="carousel-btn prev" id="prevBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            <button class="carousel-btn next" id="nextBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button class="indicator active" data-index="0"></button>
+            <button class="indicator" data-index="1"></button>
+            <button class="indicator" data-index="2"></button>
+            <button class="indicator" data-index="3"></button>
+            <button class="indicator" data-index="4"></button>
+            <button class="indicator" data-index="5"></button>
+        </div>
+        
+        <!-- Thumbnails Grid -->
+        <div class="texture-grid" style="margin-top: 3rem;">
+            <div class="texture-item" data-index="0" onclick="openLightbox('image/étagère-01.jpg')" style="background-image: url('image/étagère-01.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <div class="texture-overlay">
+                    <div class="texture-name">Velours Premium</div>
+                    <div class="texture-description">Douceur intemporelle pour vos sièges</div>
+                </div>
+            </div>
+            <div class="texture-item" data-index="1" onclick="openLightbox('image/porte de style grange-01.jpg')" style="background-image: url('image/porte de style grange-01.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <div class="texture-overlay">
+                    <div class="texture-name">Chêne Naturel</div>
+                    <div class="texture-description">Grain authentique, finition légère</div>
+                </div>
+            </div>
+            <div class="texture-item" data-index="2" onclick="openLightbox('image/meuble de salle de bain-01.jpg')" style="background-image: url('image/meuble de salle de bain-01.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <div class="texture-overlay">
+                    <div class="texture-name">Marbre Blanc</div>
+                    <div class="texture-description">Pureté minérale et sophistication</div>
+                </div>
+            </div>
+            <div class="texture-item" data-index="3" onclick="openLightbox('image/porte de style grange-02.jpg')" style="background-image: url('image/porte de style grange-02.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <div class="texture-overlay">
+                    <div class="texture-name">Cuir Véritable</div>
+                    <div class="texture-description">Patine naturelle qui s'améliore</div>
+                </div>
+            </div>
+            <div class="texture-item" data-index="4" onclick="openLightbox('image/meuble de salle de bain-02.jpg')" style="background-image: url('image/meuble de salle de bain-02.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <div class="texture-overlay">
+                    <div class="texture-name">Laiton Brossé</div>
+                    <div class="texture-description">Détails orfèvrerie et brillance</div>
+                </div>
+            </div>
+            <div class="texture-item" data-index="5" onclick="openLightbox('image/étagère-02.jpg')" style="background-image: url('image/étagère-02.jpg'); background-size: cover; background-position: center; cursor: pointer;">
+                <div class="texture-overlay">
+                    <div class="texture-name">Lin Naturel</div>
+                    <div class="texture-description">Légèreté et texture organique</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="services-wrapper">
+            <div class="section-header">
+                <div class="label">Services Premium</div>
+                <h2>Une Expérience Complète</h2>
+                <p>Au-delà du mobilier, nous vous proposons un accompagnement personnalisé du projet à la livraison.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>Conception sur Mesure</h3>
+                    <p>Créez le meuble qui s'adapte parfaitement à votre espace. Nos designers travaillent avec vous pour transformer votre vision en réalité.</p>
+                    <a href="#contact" class="service-cta">Commencer</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Livraison & Montage</h3>
+                    <p>Une équipe d'experts s'occupe de tout, de notre atelier à votre salon. Service blanc-gants pour votre tranquillité d'esprit.</p>
+                    <a href="#contact" class="service-cta">En Savoir Plus</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>Conseil Décoration</h3>
+                    <p>Prenez rendez-vous avec nos designers d'intérieur pour transformer votre foyer. Consultations gratuites en ligne ou en showroom.</p>
+                    <a href="#contact" class="service-cta">Réserver</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="image/notre équipe.jpg" alt="Notre Équipe BOSON" class="team-image">
+            </div>
+            <div class="about-content">
+                <div class="about-label">À Propos de Nous</div>
+                <h2>Notre Équipe</h2>
+                <p>L'élégance n'est pas le fruit du hasard. C'est la passion et l'expertise d'une équipe dédiée qui transforme chaque vision en réalité. Chez BOSON, nous croyons que le mobilier de luxe raconte une histoire—celle de ceux qui le créent.</p>
+                <p>Avec plus de 5 ans d'expérience dans le design et l'artisanat, notre équipe combine tradition et innovation pour créer des pièces intemporelles qui transcendent les tendances.</p>
+                <ul class="about-features">
+                    <li>Designers primés en design international</li>
+                    <li>Maîtres artisans avec savoir-faire ancestral</li>
+                    <li>Engagement envers la qualité premium</li>
+                    <li>Service client 5 étoiles</li>
+                </ul>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Années d'Expérience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Projets Réalisés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Clients Satisfaits</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINALE -->
+    <section class="cta-finale" id="contact">
+        <div class="cta-finale-content">
+            <h2>Commencez Votre Voyage</h2>
+            <p>Une consultation gratuite avec nos experts pour explorer ensemble comment transformer votre espace en sanctuaire personnel d'élégance.</p>
+            <div class="cta-finale-buttons">
+                <a href="mailto:hello@boson.luxury" class="btn-primary">hello@boson.luxury</a>
+                <a href="tel:+33122334455" class="btn-secondary">034 81 884 31</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>BOSON</h4>
+                <p>L'élégance à l'état pur. Mobilier de luxe moderne pour les espaces qui méritent mieux.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Collections</h4>
+                <ul>
+                    <li><a href="#">Canapés & Sièges</a></li>
+                    <li><a href="#">Tables Basses</a></li>
+                    <li><a href="#">Tables à Manger</a></li>
+                    <li><a href="#">Mobilier Bureau</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#">Conception sur Mesure</a></li>
+                    <li><a href="#">Consultation Déco</a></li>
+                    <li><a href="#">Livraison Premium</a></li>
+                    <li><a href="#">Support Client</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Entreprise</h4>
+                <ul>
+                    <li><a href="#">À Propos</a></li>
+                    <li><a href="#">Showroom</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Emplois</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 BOSON. L'élégance à l'état pur. Tous droits réservés.</p>
+            <div class="footer-social">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Aperçu">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
