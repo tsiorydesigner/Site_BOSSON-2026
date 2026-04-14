@@ -51,6 +51,24 @@ textureItems.forEach(item => {
     });
 });
 
+// Support du balayage (swipe) pour mobile
+let touchstartX = 0;
+let touchendX = 0;
+const carouselContainer = document.querySelector('.carousel-container');
+
+if (carouselContainer) {
+    carouselContainer.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+
+    carouselContainer.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX;
+        const threshold = 50; // Sensibilité du balayage
+        if (touchendX < touchstartX - threshold) nextSlide();
+        if (touchendX > touchstartX + threshold) prevSlide();
+    }, {passive: true});
+}
+
 // Auto-advance carousel every 5 seconds
 setInterval(nextSlide, 5000);
 
@@ -74,7 +92,7 @@ document.querySelectorAll('.reveal, .texture-item, .service-card, .lifestyle-gri
     observer.observe(el);
 });
 
-// Smooth scroll
+// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -94,24 +112,53 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Header blur au scroll
+// Header scroll effect
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (window.scrollY > 50) {
-        header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.1)';
+        header.classList.add('scrolled');
     } else {
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
+        header.classList.remove('scrolled');
     }
 });
 
-// Gestion de la Lightbox
+// Lightbox functionality
 function openLightbox(src) {
     const lightbox = document.getElementById('lightbox');
     const img = document.getElementById('lightbox-img');
     img.src = src;
     lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
+    const lightbox = document.getElementById('lightbox');
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Close lightbox on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+
+// Mobile menu toggle
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navItems = document.querySelector('.nav-items');
+
+if (mobileMenuBtn && navItems) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navItems.classList.toggle('active');
+        document.body.style.overflow = navItems.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close menu when clicking a link
+    navItems.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navItems.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
 }
